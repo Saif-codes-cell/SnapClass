@@ -31,14 +31,11 @@ def voice_attendance_dialog(selected_subject_id):
                 for s in enrolled_students if s['students'].get('voice_embedding')
             }
 
-            if not candidates_dict:
-                st.error('No enrolled students have voice profiles registerd')
-                return
-            
+            if audio_data is None:
+              st.warning("⚠️ No audio was recorded. Please record audio and try again.")
+            return
+
             audio_bytes = audio_data.read()
-
-            detected_scores = process_bulk_audio(audio_bytes, candidates_dict)
-
             results, attendance_to_log  = [], []
 
             current_timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
