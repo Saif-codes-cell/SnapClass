@@ -38,7 +38,6 @@ def voice_attendance_dialog(selected_subject_id):
             audio_bytes = audio_data.read()
 
 
-            audio_bytes = audio_data.read()
             results, attendance_to_log  = [], []
 
             current_timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
