@@ -6,14 +6,14 @@ def footer_home():
             margin-top:2rem;
             text-align:center;
             color:black;
-            font-size:16px;
+            font-size:20px;
             font-weight:500;
             letter-spacing:0.5px;
         ">
             © 2026 SnapClass AI • Developed by
             <span style="
                 color:#FFD43B;
-                font-weight:700;
+                font-weight:800;
             ">
                 Saif Chogle
             </span>
@@ -27,8 +27,8 @@ def footer_dashboard():
             margin-top:2.5rem;
             text-align:center;
             color:#444;
-            font-size:16px;
-            font-weight:600;
+            font-size:30px;
+            font-weight:700;
             letter-spacing:0.5px;
         ">
             © 2026 SnapClass AI • Built by
