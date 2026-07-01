@@ -32,8 +32,11 @@ def voice_attendance_dialog(selected_subject_id):
             }
 
             if audio_data is None:
-              st.warning("⚠️ No audio was recorded. Please record audio and try again.")
-            return
+             st.warning("⚠️ Please record classroom audio before clicking Analyze Audio.")
+             return
+
+            audio_bytes = audio_data.read()
+
 
             audio_bytes = audio_data.read()
             results, attendance_to_log  = [], []
